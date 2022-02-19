@@ -1,0 +1,49 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+
+<!-- Incase of doubts in the positioning/alignment of the layouts, enable the borders or the gridlines (for gridPane)
+    To add border,
+        style="-fx-border-color: blue; -fx-border-width: 1; -fx-border-style: dashed"
+    -->
+
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <Label text="New Label" alignment="CENTER" BorderPane.alignment="CENTER"
+        style="-fx-border-color: blue; -fx-border-width: 1; -fx-border-style: dashed"/>
+        <!-- The alignment property of the Label determines the label-content's alignment.
+                Note: The label doesnt occupy the entire top position of BorderPane, but
+                only the preferred width. This can be verified by giving a border to the label.
+            -->
+    </top>
+
+    <!-- Positioning the HBox in the Bottom section/position of the BorderPane.
+         Note: We couldnt have added each button individually to the Bottom position of the BorderPane,
+                because each position can have only one child. Thus, we nest layouts. Here, the HBox is nested
+                inside the BorderPane in the Bottom position.
+        -->
+    <bottom>
+        <HBox spacing="5" alignment="CENTER_RIGHT"
+              style="-fx-border-color: blue; -fx-border-width: 1; -fx-border-style: dashed">
+            <!-- The alignment specifies the alignment of each child of the layout.
+                    Thus, the alignment property of the HBox, specifies the alignment
+                    of the buttons. However, the TOP_RIGHT/CENTER_RIGHT/BOTTOM_RIGHT
+                    would not change the vertical aligment of the buttons, horizontally
+                    the button will be placed at RIGHT.
+                    Similarly, TOP_LEFT/CENTER_LEFT/BOTTOM_LEFT will place the buttons
+                    to the LEFT, with not change in the vertical alignment.
+             -->
+            <padding>
+                <Insets bottom="5" right="5"/>
+            </padding>
+            <Button text="OK" prefWidth="90"/>
+            <Button text="Cancel" prefWidth="90"/>
+            <Button text="Help" prefWidth="90"/>
+        </HBox>
+    </bottom>
+</BorderPane>

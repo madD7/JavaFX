@@ -1,0 +1,20 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<HBox fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="bottom_right"
+            style="-fx-border-color: black; -fx-border-width: 1; -fx-border-style: dashed"
+            spacing="5">
+    <!-- The border is added around HBox, the CSS style (semicolon seperated commands). -->
+
+    <padding>
+        <Insets bottom="5" right="5"/>
+    </padding>
+
+    <Button text="OK" prefWidth="90"/>
+    <Button text="Cancel" prefWidth="90"/>
+    <Button text="Help" prefWidth="90"/>
+    <!-- The HBox is stretched and expands below the buttons -->
+</HBox>
