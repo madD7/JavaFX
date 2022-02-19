@@ -1,0 +1,32 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<!-- The hgap and vgap specify the gap between two cells of the Gridpane in pixels.
+     gridLinesVisible helps check the alignment of cells.
+     By default the Grid layout is aligned in CENTRE. -->
+<?import javafx.scene.layout.ColumnConstraints?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+          gridLinesVisible="true">
+    <!-- If the row & column for each button is not specified,
+            the buttons stack up over each other.
+             The default position is row 0 and column 0 for all buttons -->
+
+    <!-- Adding Column constraints will result to dividing the whole grid into 2 equal parts (50% each).
+            If the size of the window is changed, the size of the gird adjusts itself to
+            maintain column constraints.
+            Column constraint can also be set in terms of pixels.
+            The sequence of the ColumnConstraints children defined is important -->
+    <!-- columnConstraints>
+        <ColumnConstraints percentWidth="50"/>
+        <ColumnConstraints percentWidth="50"/>
+    </columnConstraints -->
+    <Button text="Button 1" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <Button text="Button 2" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Button text="Check the Grid Size" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Button text="Button 4" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Button text="Button 5" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+</GridPane>
