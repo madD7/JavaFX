@@ -1,0 +1,44 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.TilePane?>
+
+<!--    Unlike the HBox & VBox, in FlowPane, the children wont be cutoff
+        when the user resizes the window. The FlowPane will wrap the
+        children in the next row or column, depending upon the orientation
+        of the FlowPane.
+    -->
+
+
+<FlowPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" orientation="HORIZONTAL">
+    <Button text="Button One"/>
+    <Button text="Button Two"/>
+    <Button text="Button 3"/>
+    <Button text="Button Four"/>
+    <Button text="Button 5"/>
+    <Button text="Button Six"/>
+    <Button text="Button SEVEN"/>
+    <Button text="Button 8"/>
+</FlowPane>
+
+<!--
+    TilePane is same as FlowPane, except that it lays out its children
+    in grid. Every tile/cell of the Grid will have the same size.
+    The cell size is decided equal to the size of the biggest button.
+    Thus, There are gaps between the buttons that arent wide enough to occupy
+    the width of cell.
+-->
+<!-- TilePane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml">
+    <Button text="Button One"/>
+    <Button text="Button Two"/>
+    <Button text="Button 3"/>
+    <Button text="Button Four"/>
+    <Button text="Button 5"/>
+    <Button text="Button Six"/>
+    <Button text="Button SEVEN"/>
+    <Button text="Button 8"/>
+</TilePane -->

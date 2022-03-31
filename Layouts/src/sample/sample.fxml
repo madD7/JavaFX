@@ -9,8 +9,13 @@
      By default the Grid layout is aligned in CENTRE. -->
 <?import javafx.scene.layout.ColumnConstraints?>
 <GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+          xmlns:fx="http://javafx.com/fxml" alignment="top_center" hgap="10" vgap="10"
           gridLinesVisible="true">
+
+    <!-- padding, adds padding pixels between title bar and the Gridpane layout. -->
+    <padding>
+        <Insets top="5" />
+    </padding>
     <!-- If the row & column for each button is not specified,
             the buttons stack up over each other.
              The default position is row 0 and column 0 for all buttons -->
@@ -24,9 +29,11 @@
         <ColumnConstraints percentWidth="50"/>
         <ColumnConstraints percentWidth="50"/>
     </columnConstraints -->
-    <Button text="Button 1" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <Button text="Button 1" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="RIGHT"/>
     <Button text="Button 2" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
     <Button text="Check the Grid Size" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
     <Button text="Button 4" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-    <Button text="Button 5" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Button text="Button 5 Very Long Button" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+    <!-- GridPane.columnSpan will adjust the button between the mentioned columns. Thus the column size doesnt
+            adjust itself to this button. -->
 </GridPane>

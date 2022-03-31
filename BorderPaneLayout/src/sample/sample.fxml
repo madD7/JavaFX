@@ -22,6 +22,21 @@
             -->
     </top>
 
+    <left>
+        <Label text="This is in Left Position" alignment="CENTER"
+               style="-fx-border-color: blue; -fx-border-width: 1; -fx-border-style: dashed"/>
+    </left>
+
+    <center>
+        <Label text="Center Position" alignment="CENTER"
+               style="-fx-border-color: blue; -fx-border-width: 1; -fx-border-style: dashed"/>
+    </center>
+
+    <right>
+        <Label text="This is in Right Position" alignment="CENTER"
+               style="-fx-border-color: blue; -fx-border-width: 1; -fx-border-style: dashed"/>
+    </right>
+
     <!-- Positioning the HBox in the Bottom section/position of the BorderPane.
          Note: We couldnt have added each button individually to the Bottom position of the BorderPane,
                 because each position can have only one child. Thus, we nest layouts. Here, the HBox is nested
